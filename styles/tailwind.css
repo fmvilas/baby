@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'blueberry';
+  src: url('/blueberry.woff2') format('woff2'),
+       url('/blueberry.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, white),
+              radial-gradient(circle at center bottom, theme('colors.teal.200') 0%, theme('colors.teal.300') 8%, theme('colors.teal.400') 30%, theme('colors.teal.500') 40%, transparent 80%),
+              radial-gradient(circle at center top, theme('colors.teal.200') 0%, theme('colors.teal.300') 8%, theme('colors.teal.400') 25%, theme('colors.teal.500') 62.5%,theme('colors.teal.500') 100%);
+}
+
+.dark\:background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, theme('colors.gray.900')),
+              radial-gradient(circle at center bottom, theme('colors.teal.600') 0%, theme('colors.teal.700') 8%, theme('colors.teal.800') 30%, theme('colors.teal.900') 40%, transparent 80%),
+              radial-gradient(circle at center top, theme('colors.teal.600') 0%, theme('colors.teal.700') 8%, theme('colors.teal.800') 25%, theme('colors.teal.900') 62.5%,theme('colors.teal.900') 100%);
+}
+
+.font-blueberry {
+  font-family: blueberry;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.9em;
+  margin-right: 0.9em;
+  margin-bottom: 1.2em;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.7em solid theme('colors.blue.200');
+  border-left: 0.3em solid transparent;
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+.star:before, .star:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0.6em;
+  left: -1em;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid  theme('colors.blue.200');
+  border-left: 1em solid transparent;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+}
+.star:after {
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+}
+
+.moon{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: -18px 15px 0 0px #f5ef9b;
+}
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 52px;
+  height: 80px;
+  border-radius: 50px 50px 0 0;
+  background: theme('colors.red.500');
+}
+
+.heart::before {
+  left: 50px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
