@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Head from 'next/head'
 import DarkModeToggle from "react-dark-mode-toggle"
 
-export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(() => false)
+export default function Home({ darkMode = false }) {
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const name = 'Ada'
+
+  useEffect(() => {
+    setIsDarkMode(darkMode)
+  }, [])
 
   return (
     <div className={isDarkMode ? 'scheme-dark' : ''}>
