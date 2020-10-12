@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Head from 'next/head'
 import DarkModeToggle from "react-dark-mode-toggle"
+import isDarkTheme from 'is-dark-theme'
+import ls from 'local-storage'
 
-export default function Home({ darkMode = false }) {
+export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const name = 'Ada'
 
   useEffect(() => {
-    setIsDarkMode(darkMode)
+    const lsDarkMode = ls('dark-mode')
+    setIsDarkMode(lsDarkMode === null ? isDarkTheme() : lsDarkMode)
   }, [])
+  
+  function changeDarkMode(isDark) {
+    ls('dark-mode', isDark)
+    setIsDarkMode(isDark)
+  }
 
   return (
     <div className={isDarkMode ? 'scheme-dark' : ''}>
@@ -36,7 +44,7 @@ export default function Home({ darkMode = false }) {
           <h1 className="transition-all duration-1000 ease-in-out font-blueberry absolute left-0 top-0 pt-20 text-lg tracking-wider text-teal-800 text-center sm:relative sm:left-auto sm:top-auto sm:pt-6 sm:pl-0 sm:w-1/2 sm:pt-20 sm:text-4xl dark:text-teal-500">
             <div>Las incre&iacute;bles</div>
             <div>aventuras de</div>
-            <div className="inline-block px-16 transition-all duration-1000 ease-in-out text-5xl transform -rotate-10 tracking-wider text-white sm:text-6xl lg:text-7xl dark:text-red-500">
+            <div className="inline-block px-16 transition-all duration-1000 ease-in-out text-5xl transform -rotate-10 tracking-wider text-red-400 sm:text-6xl lg:text-7xl dark:text-red-500">
               {name}
               <div className="opacity-0 dark:opacity-100 transition-all duration-1000 ease-in-out">
                 <div className="absolute left-0 top-0 pl-4 pt-5 sm:pl-0"><div className="star opacity-70 transform scale-50"></div></div>
@@ -46,7 +54,7 @@ export default function Home({ darkMode = false }) {
           </h1>
           <div className="absolute top-0 left-0 w-full pt-4 text-center">
             <DarkModeToggle
-              onChange={setIsDarkMode}
+              onChange={changeDarkMode}
               checked={isDarkMode}
               size={60}
               className="inline-block"

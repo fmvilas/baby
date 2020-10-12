@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "is-dark-theme": "^1.0.3",
+    "local-storage": "^2.0.0",
     "next": "9.5.5",
     "react": "16.13.1",
     "react-dark-mode-toggle": "0.0.10",
