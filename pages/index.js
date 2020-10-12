@@ -3,6 +3,7 @@ import Head from 'next/head'
 import DarkModeToggle from "react-dark-mode-toggle"
 import isDarkTheme from 'is-dark-theme'
 import ls from 'local-storage'
+import Posts from "../components/posts";
 
 export default function Home({ name }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -78,17 +79,7 @@ export default function Home({ name }) {
         </header>
 
         <main className="relative w-full max-w-screen-md mx-auto px-4 mt-20 transition-all duration-1000 ease-in-out text-teal-800 dark:text-white">
-          <h2 className="font-blueberry text-2xl">Mi primer post</h2>
-          <div className="text-teal-600 mt-1 text-sm">11 de Octubre de 2020</div>
-          <p className="text-xl mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p className="text-xl mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p className="text-xl mt-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          <Posts />
         </main>
 
         <footer className="text-center text-sm mt-20 mb-3 text-gray-500">
