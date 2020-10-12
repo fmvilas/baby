@@ -4,9 +4,8 @@ import DarkModeToggle from "react-dark-mode-toggle"
 import isDarkTheme from 'is-dark-theme'
 import ls from 'local-storage'
 
-export default function Home() {
+export default function Home({ name }) {
   const [isDarkMode, setIsDarkMode] = useState(false)
-  const name = 'Ada'
 
   useEffect(() => {
     const lsDarkMode = ls('dark-mode')
@@ -86,4 +85,12 @@ export default function Home() {
       </section>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      name: process.env.BABY_NAME || null,
+    },
+  }
 }
