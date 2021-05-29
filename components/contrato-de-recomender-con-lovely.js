@@ -18,9 +18,6 @@ export default function ContratoDeRecomenderConLovely({ className = '' }) {
         La madre, en adelante LA LECHERA. 😉
       </p>
       <p className="text-xl mt-6">
-        Me gusta mucho este hogar y sé que dentro de poco voy a tener que salir de aquí, porque el espacio empieza a ser reducido, pero aguantaré aquí un par de meses más y las ganas que tengo de conoceos a todo: a la bisa Maxi, a la abuela Pili, la abuela Carmen y el abuelo Martín, a todos los Titis, que Tío Antonio me enseñe cosas de científicos, bailar con Titi Grunci, que Titi Barbaño me cuente las cosas más increíbles, que Titi María me cuide y me mime mucho mucho mucho y de jugar con el divertido de Titi Chema. También tengo ganas de conocer a los primos y las primas, ¡qué me han dicho que tengo unas primas en León! ¡Qué ganas de conocer a Lola y a Lluvia!
-      </p>
-      <p className="text-xl mt-6">
         LA LECHERA es muy agradable, Papá está todo el día con la oreja pegada a la barriga y alguna vez he querido recomendarle boinas modernas para combinar con su outfit pero el líquido amniótico ha impedido que me escuche. No sabe lo que he aprendido de moda con LA LECHERA y “Los diseños de Chiquininos”. Para comunicarme con él, en adelante, EL BOINAS, He probado el morse, bueno, mi versión de este, “El Morsi”. De sistema parecido, pero con patadas y silencios.
       </p>
       <p className="text-xl mt-6">
