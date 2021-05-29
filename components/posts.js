@@ -4,10 +4,12 @@ import MiCaptoraEsUnaFalsaria from "./mi-captora-es-una-falsaria";
 import PlanDeEntrenamiento from "./plan-de-entrenamiento";
 import PetitPois from "./petit-pois";
 import DiezDiasASolasConMama from "./10-dias-a-solas-con-mama";
+import ContratoDeRecomenderConLovely from "./contrato-de-recomender-con-lovely";
 
 export default function Posts() {
   return (
     <>
+      <ContratoDeRecomenderConLovely />
       <DiezDiasASolasConMama />
       <PetitPois />
       <PlanDeEntrenamiento />
